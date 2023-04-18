@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <main>
+        <h1>Formulario</h1>
+        <form action=""><!-- action seria a donde envio los datos -->
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="@hotmail.com">
+            </div>
+
+            <div>
+                <label for="name">nombre:</label>
+                <input type="text" id="name">
+            </div>
+
+            <div>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido">
+            </div>
+
+            <div>
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" min="1" max="150">
+            </div>
+
+            <div>
+                <legend>Estudios:</legend>
+                <input type="checkbox" id="Primario">
+                <label for="Primario">Primario</label>
+                <input type="checkbox" id="secundarios">
+                <label for="secundarios">secundario</label>
+                <input type="checkbox" id="terceario">
+                <label for="terceario">Terceario</label>
+                <input type="checkbox" id="universitario">
+                <label for="universitario">Universitario</label>
+            </div>
+
+            <div>
+                <legend>Estado civil:</legend>
+                <input type="radio" id="soltero" name="estado_civil">
+                <label for="soltero">Soltero</label>
+                <input type="radio" id="casado" name="estado_civil">
+                <label for="casado">Casado</label>
+                <input type="radio" id="divorciado" name="estado_civil">
+                <label for="divorciado">Divorciado</label>
+            </div>
+
+            <div>
+                <label for="sede">Sede:</label>
+                <select name="" id="sede">
+                    <option value="Lagos">Rosario - Lagos</option>
+                    <option value="Pellegrini">Rosario - Pellegrini</option><!-- value es lo que se manda al back -->
+                    <option value="Lomas">Buenos Aires - Lomas</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="nacimiento">Fecha nacimiento:</label>
+                <input type="date" name="" id="nacimiento">
+            </div>
+
+            <div>
+                <label for="pass">Contraseña:</label>
+                <input type="password" id="pass">
+            </div>
+            <button type="submit">submit</button>
+        </form>
+    </main>
+</body>
+
+</html>
