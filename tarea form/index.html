@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body>
+    <header>
+        <a href="https://mi.argentina.gob.ar" target="_blank"><img
+                src="https://id.argentina.gob.ar/static/img/miargentina.svg" alt="imagen"></a>
+    </header>
+    <main>
+        <h1>Creá tu cuenta</h1>
+        <p>Por favor completá estos datos para continuar.</p>
+        <a href="https://id.argentina.gob.ar/ingresar/" target="_blank">Si ya estás registrado, ingresá a tu cuenta.</a>
+
+        <form action="">
+            <div>
+                <label for="id_type">Identificación (CUIL o pasaporte extranjero)</label>
+                <select name="id_type" id="id_type">
+                    <option value="C1">CUIL</option>
+                    <option value="P2">Pasaporte/Documento Extrajero</option>
+                </select>
+                <input type="text" id="id_type" required>
+            </div>
+            <div>
+                <label for="name">Nombre</label>
+                <input type="text" id="name" required>
+            </div>
+            <div>
+                <label for="surname">Apellido</label>
+                <input type="text" id="surname" required>
+            </div>
+            <div>
+                <label for="name"></label>
+                <input type="text" id="name" required>
+            </div>
+            <div>
+                <label for="date">Fecha de Nacimiento</label>
+                <input type="text" id="date" required>
+            </div>
+            <div>
+                <label for="country">País de Residencia</label>
+                <select name="country" id="country">
+                    <option value=""></option>
+                    <option value="AFG">Afganistán</option>
+
+                    <option value="ALB">Albania</option>
+
+                    <option value="DEU">Alemania</option>
+
+                    <option value="AND">Andorra</option>
+
+                    <option value="AGO">Angola</option>
+
+                    <option value="AIA">Anguila</option>
+
+                    <option value="ATA">Antártida</option>
+
+                    <option value="ATG">Antigua y Barbuda</option>
+
+                    <option value="SAU">Arabia Saudita</option>
+
+                    <option value="DZA">Argelia</option>
+
+                    <option value="ARG">Argentina</option>
+                </select>
+            </div>
+            <div>
+                <label for="email">Correo electrónico</label>
+                <input type="text" id="email" required>
+            </div>
+            <div>
+                <label for="email2">Confirmar Correo electrónico</label>
+                <input type="text" id="email2" required>
+            </div>
+            <div>
+                <label for="password">Creá una contraseña para Mi Argentina</label>
+                <input type="password" id="password" required>
+                <input type="checkbox" name="" id="check_pass">
+                <label for="check_pass">Mostrar la contraseña</label>
+            </div>
+            <div>
+                <h5>Términos y condiciones</h5>
+                <p>Para crear tu cuenta es necesario que aceptes los <a
+                        href="https://www.argentina.gob.ar/mi/terminos-y-condiciones-mi-argentina" target="_blank">
+                    Términos y condiciones</a> de Mi Argentina</p>
+                <input type="checkbox" id="term" required>
+                <label for="term"> Acepto los términos y condiciones de Mi Argentina</label>
+            </div>
+            <button type="submit">Crear cuenta</button>
+        </form>
+        <footer>
+            <img src="https://id.argentina.gob.ar/static/img/logo_argentina_unida.svg" alt="Argentina_unida_logo">
+            <div>
+                <a href="https://www.argentina.gob.ar/miargentina/preguntasfrecuentes" target="_blank"></a>
+                <a href="https://www.argentina.gob.ar/mi/terminos-y-condiciones-mi-argentina" target="_blank"></a>
+            </div>
+        </footer>
+    </main>
+</body>
+<!-- tarea form:https://id.argentina.gob.ar/registro/?next=/authorize/%3Fclient_id%3D613410%26response_type%3Dcode%26scope%3Dopenid%2Bprofile%2Bemail%2Boptional%26redirect_uri%3Dhttps%3A//mi.argentina.gob.ar/_oauth/oidc%26state%3DeyJsb2dpblN0eWxlIjoicmVkaXJlY3QiLCJjcmVkZW50aWFsVG9rZW4iOiJjQzljYW5ZMmk3S2dQVGtMNyIsImlzQ29yZG92YSI6ZmFsc2UsInJlZGlyZWN0VXJsIjoiaHR0cHM6Ly9taS5hcmdlbnRpbmEuZ29iLmFyLyJ9 -->
+</html>
