@@ -1,5 +1,8 @@
 header{
     height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .img-ros{
@@ -8,6 +11,7 @@ header{
     border: 0;
     vertical-align: top;
 }
+
 
 .top-nav{
     border-bottom: 1px solid orangered;
@@ -28,6 +32,9 @@ nav a{
 }
 
 #sect-new{
+    display: flex;
+    flex-direction: column;
+    justify-content: ce;
     margin-left: 20%;
     margin-right: 37%;
     margin-top: 25px;
