@@ -39,3 +39,23 @@ function suma(value1,value2) {
  }
 console.log(suma(10,5));
 console.log(suma(10.5,5));
+
+/* e. Convertir la validación del ejercicio 6d) en una función separada y llamarladentro de la función suma probando que todo siga funcionando igual. */
+function suma(value1,value2) {
+    if (typeof value1 === 'number' && typeof value2 === 'number') {
+        if (vali(value1,value2)) {
+            return value1 + value2;
+        } else {
+            return 'Un numero enviado no es entero, pero el resutado redondeado seria: ' + Math.round(value1 + value2); 
+        } 
+    }   else{
+        return 'Ambos parametros enviados deben ser numeros';
+    }
+ }
+
+ function vali(a,b) {
+    return Number.isInteger(a,b)
+    
+ }
+console.log(suma(10,5));
+console.log(suma(10.5,5));
