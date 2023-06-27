@@ -165,6 +165,90 @@ footer{
     color: orangered;
 }
 
+/* formulario */
+input{
+    border: 1px solid black;
+    width: 250px;
+    height: 17px;
+    border-radius: 15px;
+}
+
+
+form{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    flex-wrap: wrap;
+    visibility: visible;
+    background-color: #fff3e5;
+    width: 75%;
+    height: auto;
+    margin: 0;
+    border:solid 1px;
+    border-radius: 25px;
+    transform: translate(-50%, -50%);
+    left:50%;
+    top:50%;
+}
+
+#form-content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+#left-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 441px;
+}
+
+#right-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 441px;
+}
+
+form section div{
+    font-size: 20px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+form div button{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid;
+}
+
+form h1{
+    font-size: 40px;
+}
+
+#btn-sbt {
+    background-color: rgb(2, 131, 9);
+    color: white;
+    border-color: rgb(2, 131, 9);
+}
+
+#btn-close {
+    background-color: rgb(211, 38, 15);
+    border-color: rgb(211, 38, 15);
+    color: white;
+} 
+
 @media (max-width:768px) {
     /* header */
     header{
@@ -237,7 +321,7 @@ footer{
     }
 
     .foot-img2 a img{
-        height: auto; 
+        height: auto;
         width: 40px;
     }
     .bottom-part{
@@ -307,7 +391,7 @@ footer{
     }
 
     .foot-img2 a img{
-        height: auto; 
+        height: auto;
         width: 25px;
     }
 

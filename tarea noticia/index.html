@@ -6,15 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rosario3</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx3LiSFhZgAqozGt2ZmBSgdWDscwiFzYNbAe2penEUdPKu5X6JH1FLSpRFWLw3pPQFCng&usqp=CAU">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx3LiSFhZgAqozGt2ZmBSgdWDscwiFzYNbAe2penEUdPKu5X6JH1FLSpRFWLw3pPQFCng&usqp=CAU">
 </head>
 
 <body>
     <header>
         <div class="left">
-        <img class="img-ros" src="https://www.rosario3.com/__export/1559661968129/sites/rosario3/arte/v2/r3-logo.svg"
-            alt="imagen medio">
+            <img class="img-ros"
+                src="https://www.rosario3.com/__export/1559661968129/sites/rosario3/arte/v2/r3-logo.svg"
+                alt="imagen medio">
         </div>
         <div class="right">
             <nav>
@@ -31,11 +33,64 @@
                     <a href="https://www.rosario3.com/seccion/videos/" target="_blank">VIDEOS</a>
                 </div>
             </nav>
-        </header>
+    </header>
 
-        </span>
 
     <main>
+        <form action="DOM.js">
+            <h1 id="tittle-from">Formulario:</h1>
+            <section id="form-content">
+                <section id="left-form">
+                    <div>
+                        <label for="userName">Nombre completo:</label>
+                        <input type="text" placeholder="nombre y apellido" id="userName" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" placeholder="@example.com" id="email" required>
+                    </div>
+                    <div>
+                        <label for="pass">Contraseña:</label>
+                        <input type="password" placeholder="contraseña" id="pass" required>
+                    </div>
+                    <div>
+                        <label for="pass2">confirmar Contraseña:</label>
+                        <input type="password" placeholder="contraseña" id="pass2" required>
+                    </div>
+                    <div>
+                        <label for="age">Edad:</label>
+                        <input type="number" placeholder="edad" id="age" required>
+                    </div>
+
+                </section>
+                <section id="right-form">
+                    <div>
+                        <label for="tel">Telefono:</label>
+                        <input type="tel" placeholder="+341..." id="tel" required>
+                    </div>
+                    <div>
+                        <label for="adresse">Dirección:</label>
+                        <input type="text" placeholder="la paz 1054" id="adress" required>
+                    </div>
+                    <div>
+                        <label for="city">Ciudad:</label>
+                        <input type="text" placeholder="Rosario" id="city" required>
+                    </div>
+                    <div>
+                        <label for="postal">Código postal:</label>
+                        <input type="text" placeholder="1000" id="postal" required>
+                    </div>
+                    <div>
+                        <label for="dni">DNI:</label>
+                        <input type="number" placeholder="sin puntos" id="dni" required>
+                    </div>
+                </section>
+            </section>
+            <div>
+                <button type="button" id="btn-close">Cerrar formulario</button>
+                <button type="button" id="btn-sbt">Enviar formulario</button>
+            </div>
+        </form>
         <section id="sect-new">
             <div class="top-new">
                 <a class="type" href="https://www.rosario3.com/seccion/economia-negocios-agro/"
@@ -84,7 +139,8 @@
                 movimiento y natural en cocinas, separación de residuos en lobby y de aceite usado, entre otros", agregó
                 el gerente.</p>
             <div id="img-2">
-                <img src="https://www.rosario3.com/export/sites/rosario3/img/2023/04/13/rpw-lnae.jpeg_674994428.jpeg" alt="imagen2_mc">
+                <img src="https://www.rosario3.com/export/sites/rosario3/img/2023/04/13/rpw-lnae.jpeg_674994428.jpeg"
+                    alt="imagen2_mc">
                 <span>Otra vista del diseño que tendrá el local en el Hipódromo</span>
             </div>
             <p>“Este anuncio es para Arcos Dorados uno de los hechos más importantes del año. No solo porque abriremos
@@ -140,6 +196,7 @@
             <a href="https://www.cms-medios.com/"></a>
         </div>
     </footer>
+    <script src="./DOM.js"></script>
 </body>
 
-</html>
+</htm
