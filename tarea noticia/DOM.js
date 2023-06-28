@@ -29,10 +29,15 @@ var butt = document.getElementById('btn-sbt');
 function inputError(param, msg) {
     param.style.border = '1px solid red';
     var div = document.createElement('div');
-    div.innerHTML = msg;
+    div.innerHTML = msg +'*';
     div.className = 'condicion';
     div.style.color = '#ff0000';
     div.style.margin = '0';
+    div.style.marginTop = '1.5px';
+    div.style.marginBottom = '-2.5px';
+    div.style.fontSize = '17px';
+    div.style.display = 'flex';
+    div.style.justifyContent = 'flex-start';
     param.insertAdjacentElement('afterend', div);
 }
 function focu() {
@@ -69,7 +74,7 @@ email.addEventListener('focus', focu);
 function valemail() {
     var include = this.value.includes('@');
     if (!include) {
-        inputError(this, 'El email debe ser formato email');
+        inputError(this, 'Debe ser formato email');
     }
 }
 
@@ -90,7 +95,7 @@ function valiPass() {
         }
     }
     if (countNum < 2 || countLetter < 2 || passValue.length < 8) {
-        inputError(this, 'mínimo 2 numeros, 2 letras y 8 caracteres');
+        inputError(this, 'Mínimo 2 numeros, 2 letras y 8 caracteres');
     }
 }
 
@@ -102,7 +107,7 @@ function confirPass() {
     var pass2 = this.value;
     var pass1 = document.getElementById('pass').value;
     if (pass1 !== pass2) {
-        inputError(this, 'Ambas contraseñas deben coincidir');
+        inputError(this, 'Las contraseñas deben coincidir');
     }
 }
 
@@ -131,7 +136,7 @@ tel.addEventListener('blur', function () {
         }
     }
     if (phone.includes(' ') || phone.includes('-') || phone.includes('(') || phone.includes(')') || phone.length < 7 || countNum < phone.length - 1) {
-        inputError(this, 'no debe incluir espacios/guiones/parentesis');
+        inputError(this, 'No debe incluir espacios/guiones/parentesis');
     }
 });
 tel.addEventListener('focus', focu);
@@ -150,7 +155,7 @@ adress.addEventListener('blur', function () {
         }
     }
     if (!adres.includes(' ') || adres.length < 5 || countLetter < 0 || countNum < 0) {
-        inputError(this, 'debe tener letras/numeros y un espacio');
+        inputError(this, 'Debe tener letras/numeros y un espacio');
     }
 });
 adress.addEventListener('focus', focu);
@@ -160,17 +165,17 @@ var postal = document.getElementById('postal');
 var dni = document.getElementById('dni');
 
 city.addEventListener('blur', function () {
-    valiLenght(this, 'La ciudad debe tener al menos 3 caracteres.', 3);
+    valiLenght(this, 'Debe tener al menos 3 caracteres', 3);
 });
 city.addEventListener('focus', focu);
 
 postal.addEventListener('blur', function () {
-    valiLenght(this, 'El codigo postal debe tener al menos 3 caracteres.', 3);
+    valiLenght(this, 'Debe tener al menos 3 caracteres', 3);
 });
 postal.addEventListener('focus', focu);
 
 dni.addEventListener('blur', function () {
-    valiLenght(this, 'El dni debe tener al menos 7 caracteres.', 7);
+    valiLenght(this, 'Debe tener al menos 7 caracteres', 7);
 });
 dni.addEventListener('focus', focu);
 
@@ -205,8 +210,18 @@ btn.addEventListener('click', function btnClick() {
 
 });
 
-var btnClose = document.getElementById('btn-close');
-btnClose.addEventListener('click',function (){
+var btnForm = document.getElementById('btn-subs');
+btnForm.addEventListener('click',function callForm(){
     var form = document.querySelector('form');
-    form.style.visibility = 'hidden';
+    form.style.display = 'flex';
+    btnForm.style.visibility = 'hidden';
 });
+
+var btnClose = document.getElementById('btn-close');
+btnClose.addEventListener('click',function CloseForm(){
+    var form = document.querySelector('form');
+    form.style.display = 'none';
+    btnForm.style.visibility = 'visible';
+});
+
+
