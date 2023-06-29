@@ -35,7 +35,7 @@ function inputError(param, msg) {
     div.style.margin = '0';
     div.style.marginTop = '1.5px';
     div.style.marginBottom = '-2.5px';
-    div.style.fontSize = '17px';
+    div.style.fontSize = '16.5px';
     div.style.display = 'flex';
     div.style.justifyContent = 'flex-start';
     param.insertAdjacentElement('afterend', div);
@@ -52,9 +52,9 @@ nameSurn.addEventListener('focus', focu);
 nameSurn.addEventListener('keyup', namePlus);
 
 function namePlus(){
-    var subTitle = document.getElementById('tittle-from');
+    var subTitle = document.getElementById('greetings');
     console.log(subTitle);
-    subTitle.innerText = 'Formulario: Hola ' + this.value;
+    subTitle.innerText = 'Hola ' + this.value;
 }
 
 
