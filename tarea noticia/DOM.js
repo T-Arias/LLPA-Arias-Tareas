@@ -181,7 +181,19 @@ dni.addEventListener('focus', focu);
 
 
 var btn = document.getElementById('btn-sbt');
-btn.addEventListener('click', function btnClick() {
+btn.addEventListener('click',btnClick); 
+
+var url = 'https://jsonplaceholder.typicode.com/';
+fetch(url).then(function(response) {
+    console.log(response);
+    if (response.ok) {
+        console.log('paso');
+    } else {
+        console.log('paso');        
+    }    
+})/* .then(data => console.log(data)) */.catch(console.error(error));
+
+function btnClick() {
     var validate1 = true;
     var validate2 = true;
     var inpts = document.querySelectorAll('form div input');
@@ -208,7 +220,7 @@ btn.addEventListener('click', function btnClick() {
 
     }
 
-});
+}
 
 var btnForm = document.getElementById('btn-subs');
 btnForm.addEventListener('click',function callForm(){
