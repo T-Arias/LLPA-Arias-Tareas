@@ -53,7 +53,6 @@ nameSurn.addEventListener('keyup', namePlus);
 
 function namePlus() {
     var subTitle = document.getElementById('greetings');
-    console.log(subTitle);
     subTitle.innerText = 'Hola ' + this.value;
 }
 
@@ -203,11 +202,20 @@ function btnClick() {
         if (conf) {
             var url = 'https://jsonplaceholder.typicode.com/todos/';    
             fetch(url).then(function (response) {
-                console.log(response);
                 if (response.ok) {
-                    alert('Usuario creado con exito');
                     var form = document.querySelector('form');
                     form.style.visibility = 'hidden';
+                    localStorage.clear();
+                    localStorage.setItem('name',nameSurn.value);
+                    localStorage.setItem('email',email.value);
+                    localStorage.setItem('age',age.value);
+                    localStorage.setItem('tel',tel.value);
+                    localStorage.setItem('adress',adress.value);
+                    localStorage.setItem('city',city.value);
+                    localStorage.setItem('postal',postal.value);
+                    localStorage.setItem('dni',dni.value);
+                    localStorage.setItem('pass',pass.value);
+                    alert('Usuario creado con exito');
                 } else {
                     alert('No se ha podido conectar con el servidor');
                 }
@@ -225,6 +233,18 @@ btnForm.addEventListener('click', function callForm() {
     var form = document.querySelector('form');
     form.style.display = 'flex';
     btnForm.style.visibility = 'hidden';
+    if (localStorage.length!==0) {
+        nameSurn.value = localStorage.getItem('name');
+        email.value = localStorage.getItem('email');
+        age.value = localStorage.getItem('age');
+        tel.value = localStorage.getItem('tel');
+        adress.value = localStorage.getItem('adress');
+        city.value = localStorage.getItem('city');
+        postal.value = localStorage.getItem('postal');
+        dni.value = localStorage.getItem('dni');
+        pass.value = localStorage.getItem('pass');
+        pass2.value = localStorage.getItem('pass');
+    }
 });
 
 var btnClose = document.getElementById('btn-close');
