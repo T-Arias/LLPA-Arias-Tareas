@@ -29,7 +29,7 @@ var butt = document.getElementById('btn-sbt');
 function inputError(param, msg) {
     param.style.border = '1px solid red';
     var div = document.createElement('div');
-    div.innerHTML = msg +'*';
+    div.innerHTML = msg + '*';
     div.className = 'condicion';
     div.style.color = '#ff0000';
     div.style.margin = '0';
@@ -51,7 +51,7 @@ nameSurn.addEventListener('blur', valName);
 nameSurn.addEventListener('focus', focu);
 nameSurn.addEventListener('keyup', namePlus);
 
-function namePlus(){
+function namePlus() {
     var subTitle = document.getElementById('greetings');
     console.log(subTitle);
     subTitle.innerText = 'Hola ' + this.value;
@@ -181,17 +181,7 @@ dni.addEventListener('focus', focu);
 
 
 var btn = document.getElementById('btn-sbt');
-btn.addEventListener('click',btnClick); 
-
-var url = 'https://jsonplaceholder.typicode.com/';
-fetch(url).then(function(response) {
-    console.log(response);
-    if (response.ok) {
-        console.log('paso');
-    } else {
-        console.log('paso');        
-    }    
-})/* .then(data => console.log(data)) */.catch(console.error(error));
+btn.addEventListener('click', btnClick);
 
 function btnClick() {
     var validate1 = true;
@@ -209,12 +199,20 @@ function btnClick() {
         }
     }
     if (validate1 && validate2) {
-        const response = confirm('Verifique sus datos:'+'\nNombre: '+nameSurn.value +'\nEmail: '+email.value+'\nEdad: '+age.value+'\nTelefono: '+tel.value+'\nDireccion: '+adress.value+'\nCiudad: '+city.value+'\nCodigo Postal: '+postal.value+'\nDNI: '+dni.value);
-        if (response) {
-            alert('Usuario creado con exito');
-            var form = document.querySelector('form');
-            form.style.visibility = 'hidden';
-        }else{
+        const conf = confirm('Verifique sus datos:' + '\nNombre: ' + nameSurn.value + '\nEmail: ' + email.value + '\nEdad: ' + age.value + '\nTelefono: ' + tel.value + '\nDireccion: ' + adress.value + '\nCiudad: ' + city.value + '\nCodigo Postal: ' + postal.value + '\nDNI: ' + dni.value);
+        if (conf) {
+            var url = 'https://jsonplaceholder.typicode.com/todos/';    
+            fetch(url).then(function (response) {
+                console.log(response);
+                if (response.ok) {
+                    alert('Usuario creado con exito');
+                    var form = document.querySelector('form');
+                    form.style.visibility = 'hidden';
+                } else {
+                    alert('No se ha podido conectar con el servidor');
+                }
+            });
+        } else {
             alert('Subscipcion cancelada con exito');
         }
 
@@ -223,14 +221,14 @@ function btnClick() {
 }
 
 var btnForm = document.getElementById('btn-subs');
-btnForm.addEventListener('click',function callForm(){
+btnForm.addEventListener('click', function callForm() {
     var form = document.querySelector('form');
     form.style.display = 'flex';
     btnForm.style.visibility = 'hidden';
 });
 
 var btnClose = document.getElementById('btn-close');
-btnClose.addEventListener('click',function CloseForm(){
+btnClose.addEventListener('click', function CloseForm() {
     var form = document.querySelector('form');
     form.style.display = 'none';
     btnForm.style.visibility = 'visible';
